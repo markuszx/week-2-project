@@ -13,15 +13,15 @@ console.log(tripler([-5, 10, 0, 11])); // [ -15, 30, 0, 33 ]
 
 let tripler = function(nums) {
     // Your code here
-  let arr = []
-    nums.map(function (el){
-      let total = el*3
 
-      //arr = el*3
+    return nums.map(function (el){
 
-      arr.push(total)
+
+      el*3
+
+
     })
-    return arr
+
 
 };
 console.log(tripler([2, 7, 4])); // [ 6, 21, 12 ]
