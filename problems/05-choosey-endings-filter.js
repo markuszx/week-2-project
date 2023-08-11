@@ -2,7 +2,7 @@
 Write a function `chooseyEndings` that accepts an array of words and a suffix
 string as arguments. The function should return a new array containing the words
 that end in the given suffix. If the value passed in is not an array, return an
-empty array. Solve this using Array's `filter()` method. 
+empty array. Solve this using Array's `filter()` method.
 
 HINT: There are built in JavaScript functions that will help with determining if
 a strings ends a certain way. Go see if you can find it on MDN!
@@ -27,12 +27,43 @@ console.log(chooseyEndings(17, 'ily'));
 
 let chooseyEndings = function(words, suffix) {
   // Your code here
-};
 
+    // Your code here
+    // if(words === ''){return'[]'};
+    // if(Array.isArray(words) === false){
+    //     return '[]'
+    // }
+
+    // return words.filter(function(ends,i)
+    // {
+    // if (ends.endsWith(suffix)){return words[i]}
+    // })
+
+    // Your code here
+  // console.log(typeof words)
+  if (typeof words === 'object') {
+    let result = words.filter((word) => word.endsWith(suffix));
+    return result;
+  }
+  else {
+    let emptyArray = [];
+    return emptyArray;
+  }
+
+  };
+
+
+console.log(chooseyEndings(['simplicity', 'computer', 'felicity'], 'icity'));
+// [ 'simplicity', 'felicity' ]
+
+console.log(chooseyEndings(['simplicity', 'computer', 'felicity'], 'ily'));
+// [ ]
+
+console.log(chooseyEndings(17, 'ily'));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
   module.exports = chooseyEndings;
 } catch (e) {
   module.exports = null;
-}
+}
