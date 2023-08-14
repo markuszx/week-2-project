@@ -42,14 +42,12 @@ let chooseyEndings = function(words, suffix) {
     // Your code here
   // console.log(typeof words)
   if (typeof words === 'object') {
-    let result = words.filter((word) => word.endsWith(suffix));
-    return result;
+    return words.filter((word) => word.endsWith(suffix));
   }
   else {
     let emptyArray = [];
     return emptyArray;
   }
-
   };
 
 
